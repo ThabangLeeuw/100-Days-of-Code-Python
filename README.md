@@ -16,12 +16,3 @@ This project demonstrates:
 - Prevents duplicate guesses
 - Clear win/lose messages
 
----
-
-## Project Structure
-hangman-game/
-│
-├── main.py            # Game logic
-├── hangman_words.py   # Word list
-├── hangman_art.py     # ASCII art and logo
-└── README.md          # Documentation
