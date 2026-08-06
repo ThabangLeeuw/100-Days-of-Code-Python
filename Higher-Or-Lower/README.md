@@ -26,6 +26,7 @@ Correct guesses increase the score, while an incorrect guess ends the game.
 
 ## 📂 Project Structure
 higher_lower/
+
 │── art.py            # Contains ASCII art (logo and vs)
 │── game_data.py       # Contains dataset with names, descriptions, countries, follower counts
 │── main.py            # Main game logic
