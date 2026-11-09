@@ -1,38 +1,39 @@
-# Password Manager 🔐
+# Password Manager
 
-A simple desktop Password Manager built with Python and Tkinter. The application allows users to generate secure passwords, automatically copy them to the clipboard, and save website credentials to a CSV file.
+A simple Password Manager application built with Python and Tkinter that allows users to generate secure passwords, save login credentials, and search for stored credentials using a local JSON database.
 
 ## Features
 
-- Generate random passwords using letters, numbers, and special characters.
-- Automatically copy generated passwords to the clipboard.
-- Store website credentials in a CSV file.
-- Validate user input before saving.
-- Append new records without overwriting existing data.
-- Simple and user-friendly graphical interface.
+- Generate secure random passwords
+- Automatically copy passwords to the clipboard
+- Save website credentials to a JSON file
+- Search for stored credentials by website name
+- Handle missing or empty JSON files
+- Simple Tkinter graphical user interface
 
-## Technologies Used
+## Screenshot
 
-- Python 3
+![Password Manager Screenshot](screenshot.png)
+
+## Built With
+
+- Python
 - Tkinter
-- Pandas
+- JSON
 - Pyperclip
-- Random
-- String
 
-## Installation
+## Getting Started
 
-### Clone the Repository
+### Prerequisites
+
+- Python 3.x
+
+### Installation
 
 ```bash
 git clone https://github.com/your-username/password-manager.git
 cd password-manager
-```
-
-### Install Dependencies
-
-```bash
-pip install pandas pyperclip
+pip install pyperclip
 ```
 
 ### Run the Application
@@ -45,83 +46,53 @@ python main.py
 
 ```text
 password-manager/
-│
 ├── main.py
+├── password.json
 ├── logo.png
-├── password.csv
+├── screenshot.png
 └── README.md
 ```
 
-## How It Works
+## Example JSON Format
 
-### Generating a Password
-
-1. Click the **Generate Password** button.
-2. A random password is generated.
-3. The password is automatically inserted into the Password field.
-4. The password is copied to your clipboard.
-
-### Saving Credentials
-
-1. Enter the website name.
-2. Enter your email/username.
-3. Enter or generate a password.
-4. Click the **Add** button.
-5. The credentials are appended to `password.csv`.
-
-## Example CSV Output
-
-```csv
-gmail.com,user@gmail.com,MyP@ssword123!
-github.com,user@gmail.com,Secure#Pass456
+```json
+{
+    "Google": {
+        "email/username": "example@gmail.com",
+        "password": "Password123!"
+    },
+    "Github": {
+        "email/username": "developer@example.com",
+        "password": "SecurePass@2026"
+    }
+}
 ```
 
-## User Interface Components
+## What I Learned
 
-| Component | Description |
-|------------|-------------|
-| Website | Stores the website name |
-| Email/Username | Stores the login email or username |
-| Password | Stores the generated or entered password |
-| Generate Password | Creates a random password |
-| Add | Saves credentials to the CSV file |
+This project helped me practice:
 
-## Current Limitations
-
-- Passwords are stored in plain text.
-- No encryption is implemented.
-- Duplicate entries are not checked.
-- No password search functionality.
-- No editing or deleting of saved credentials.
-
-## Future Enhancements
-
-- Encrypt stored passwords.
-- Add website search functionality.
-- Store credentials in JSON format.
-- Add edit and delete features.
-- Implement duplicate detection.
-- Add password strength indicators.
-- Add user authentication for improved security.
-
-## Learning Objectives
-
-This project demonstrates:
-
-- GUI development using Tkinter
-- Event-driven programming
-- CSV file handling with Pandas
-- Input validation
-- Password generation techniques
+- Tkinter GUI development
+- JSON file handling
+- Exception handling
+- Python dictionaries
+- File I/O operations
+- Password generation
 - Clipboard integration with Pyperclip
-- Working with Python modules and functions
 
-## License
+## Future Improvements
 
-This project is open-source and intended for educational and personal use.
+- Password strength indicator
+- Update existing credentials
+- Delete credentials
+- Password encryption
+- Search suggestions
+- Dark mode
 
 ## Author
 
-Imraan Thabang Leeuw
+**Imraan Thabang Leeuw**
 
-Built as part of a Python learning journey focused on GUI development, data handling, and practical application development.
+Aspiring Data Engineer | Python Developer | Microsoft Fabric Enthusiast
+
+Connect with me on LinkedIn and GitHub to follow my learning journey and projects.
